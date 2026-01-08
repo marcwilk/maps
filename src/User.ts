@@ -18,9 +18,12 @@ export class User implements Mappable {
 
     markerContent(): string {
         return `
-        <div class="user-marker-content">
-            <h4>User Name: ${this.name}</h4>
-        </div>
+            <div class="info-window user">
+                <div class="info-title">User</div>
+                <div class="info-body">
+                    <strong>${this.name}</strong>
+                </div>
+            </div>
         `;
     }
 }

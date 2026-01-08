@@ -10,7 +10,7 @@ The goal of this project is to practice TypeScript fundamentals, object-oriented
 
 This project randomly generates users and companies using mock data and plots them on a map. Each entity owns its own location data and defines how it should be represented on the map.
 
-The architecture emphasizes clarity and separation of concerns, allowing multiple entity types to share common behavior while keeping their individual data models clean and type-safe.
+The architecture emphasizes clarity and separation of concerns, allowing multiple entity types to share common map behavior while keeping their individual data models clean and type-safe.
 
 ---
 
@@ -19,6 +19,7 @@ The architecture emphasizes clarity and separation of concerns, allowing multipl
 - TypeScript classes, interfaces, and strict typing
 - Object-oriented design and responsibility separation
 - Safe integration with third-party JavaScript APIs
+- Shared UI state management (single InfoWindow)
 - Mock data generation for realistic scenarios
 - Modern frontend tooling and module bundling
 - ES modules in the browser
@@ -40,6 +41,10 @@ The architecture emphasizes clarity and separation of concerns, allowing multipl
 - Randomly generates users and companies
 - Assigns each entity a latitude and longitude
 - Displays entities as markers on a Google Map
+- Automatically fits the map view to all markers
+- Differentiates marker types visually (User vs Company)
+- Displays styled InfoWindows with shared state
+- Includes a legend for marker types
 - Shares common map behavior across different data models using interfaces
 
 ---
@@ -50,7 +55,8 @@ This project is intentionally small and focused. It’s designed to demonstrate:
 
 - Comfort with TypeScript fundamentals
 - Understanding of frontend architecture and data modeling
-- Ability to integrate external APIs in a type-safe way
+- Ability to integrate and control third-party APIs
+- Attention to UI behavior and interaction details
 - Clean, readable code over unnecessary complexity
 
 ---

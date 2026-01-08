@@ -20,10 +20,13 @@ export class Company implements Mappable {
 
     markerContent(): string {
         return `
-        <div class="company-marker-content">
-            <h4>Company Name: ${this.companyName}</h4>
-            <p>Catch Phrase: ${this.catchPhrase}</p>
-        </div>
+            <div class="info-window company">
+                <div class="info-title">Company</div>
+                <div class="info-body">
+                    <strong>${this.companyName}</strong>
+                    <div class="info-subtext">${this.catchPhrase}</div>
+                </div>
+            </div>
         `;
     }
 }
